@@ -1,0 +1,12 @@
+*{
+  font-size: 18px;
+  font-family: "arial";
+}
+
+.panel-heading{
+  background-color: rgb(101, 255, 181);
+}
+.table{
+  border-style: solid;
+  border-color: teal;
+}

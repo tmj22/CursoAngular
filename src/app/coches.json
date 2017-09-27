@@ -1,0 +1,31 @@
+[{
+  "id": 1,
+  "imagen": "app/images/coche.png",
+  "modelo": "OPEL CORSA",
+  "anyo": 1999,
+  "km": 24214124,
+  "precio": 2000,
+  "estrellas": 4
+
+},
+{
+  "id": 2,
+  "imagen": "app/images/coche.png",
+  "modelo": "CITROEN XSARA",
+  "anyo": 2005,
+  "km": 434543664,
+  "precio": 4000,
+  "estrellas": 3
+
+},
+{
+  "id": 3,
+  "imagen": "app/images/coche.png",
+  "modelo": "RENAULT CLIO",
+  "anyo": 2006,
+  "km": 23522,
+  "precio": 3000,
+  "estrellas": 5
+
+}
+]

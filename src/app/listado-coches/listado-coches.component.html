@@ -1,0 +1,33 @@
+<div class="panel-success">
+  <div class="panel-heading">{{titulo}}</div><div> Modelo:
+  <input type="text" [(ngModel)] = "filtroModelo"/></div>
+  <div clas= "col-md-2"><button (click) = "mostrarPrecio() ">{{mostrar ? "Ocultar" : "Mostrar"}} precios</button>
+
+  <div class="panel-body">
+    <div class="panel-responsive">
+      <table class="table" *ngIf="coches && coches.length" width="800px">
+        <thead>
+          <tr>
+            <td>Foto</td>
+            <td>Modelo</td>
+            <td>Año</td>
+            <td>Km</td>
+            <td  *ngIf="mostrar == true">Precio/día</td>
+            <td>Valoración</td>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of coches | filtrodecoches:filtroModelo">
+            <td><img [src]="c.imagen" [style.width.px]="anchura"></td>
+            <td><a [routerLink]="['/listado/', c.id]" >{{c.modelo}}</a></td>
+            <td>{{c.anyo}}</td>
+            <td>{{c.km}}</td>
+            <td *ngIf="mostrar == true">{{c.precio | currency: 'EUR':true }}</td>
+            <td><rating-star [rating] = 'c.estrellas'(clickrating)="onratingclicado($event)"></rating-star></td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
